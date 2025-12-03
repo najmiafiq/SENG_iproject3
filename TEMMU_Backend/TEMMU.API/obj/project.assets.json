@@ -1710,14 +1710,18 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "AutoMapper": "15.1.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
-          "Microsoft.Identity.Web": "3.14.1",
-          "Microsoft.Identity.Web.DownstreamApi": "3.14.1",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0"
+          "Microsoft.Identity.Web": "4.1.1",
+          "Microsoft.Identity.Web.DownstreamApi": "4.1.1",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0",
+          "Swashbuckle": "5.6.0",
+          "Swashbuckle.AspNetCore": "10.0.1"
         },
         "compile": {
           "bin/placeholder/TEMMU.Core.dll": {}
@@ -1733,14 +1737,18 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "AutoMapper": "15.1.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
-          "Microsoft.Identity.Web": "3.14.1",
-          "Microsoft.Identity.Web.DownstreamApi": "3.14.1",
+          "Microsoft.Identity.Web": "4.1.1",
+          "Microsoft.Identity.Web.DownstreamApi": "4.1.1",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0",
+          "Swashbuckle": "5.6.0",
+          "Swashbuckle.AspNetCore": "10.0.1",
           "TEMMU.Core": "1.0.0"
         },
         "compile": {
@@ -4988,11 +4996,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\TEMMU.API.csproj",
+      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\TEMMU.API.csproj",
       "projectName": "TEMMU.API",
-      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\TEMMU.API.csproj",
+      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\TEMMU.API.csproj",
       "packagesPath": "C:\\Users\\Najmi\\.nuget\\packages\\",
-      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\obj\\",
+      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5013,11 +5021,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj": {
-              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj"
+            "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj": {
+              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj"
             },
-            "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj": {
-              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj"
+            "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj": {
+              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj"
             }
           }
         }
