@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="TEMMU.API/TEMMU.API.csproj" />
+  <Project Path="TEMMU.Core/TEMMU.Core.csproj" Id="5000f45d-eb06-4e4f-a783-56f150cababd" />
+  <Project Path="TEMMU.Infrastructure/TEMMU.Infrastructure.csproj" Id="0def95da-9afc-427e-a387-7d70c6b9fd3f" />
+</Solution>

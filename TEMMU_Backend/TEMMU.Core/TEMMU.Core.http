@@ -1,0 +1,6 @@
+@TEMMU.Core_HostAddress = http://localhost:5277
+
+GET {{TEMMU.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
