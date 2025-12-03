@@ -24,6 +24,8 @@ using TEMMU.Infrastructure.Repositories;
 
         // --- 2. DATABASE (Entity Framework Core) ---
         builder.Services.AddDbContext<GameDBContext>(options =>
+            // will try to get connection string named "DefaultConnection" from appsettings.json
+            // or from docker secrets or environment variables
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         // --- 3. IDENTITY AND AUTHENTICATION ---

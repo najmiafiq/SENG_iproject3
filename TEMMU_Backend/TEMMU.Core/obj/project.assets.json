@@ -4929,11 +4929,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj",
+      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj",
       "projectName": "TEMMU.Core",
-      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj",
+      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj",
       "packagesPath": "C:\\Users\\Najmi\\.nuget\\packages\\",
-      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\obj\\",
+      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

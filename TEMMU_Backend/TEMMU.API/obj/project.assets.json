@@ -4996,11 +4996,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\TEMMU.API.csproj",
+      "projectUniqueName": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\TEMMU.API.csproj",
       "projectName": "TEMMU.API",
-      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\TEMMU.API.csproj",
+      "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\TEMMU.API.csproj",
       "packagesPath": "C:\\Users\\Najmi\\.nuget\\packages\\",
-      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.API\\obj\\",
+      "outputPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5021,11 +5021,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj": {
-              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Core\\TEMMU.Core.csproj"
+            "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj": {
+              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Core\\TEMMU.Core.csproj"
             },
-            "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj": {
-              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_Backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj"
+            "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj": {
+              "projectPath": "E:\\git_SENG\\SEN_iproject3\\TEMMU_backend\\TEMMU.Infrastructure\\TEMMU.Infrastructure.csproj"
             }
           }
         }
