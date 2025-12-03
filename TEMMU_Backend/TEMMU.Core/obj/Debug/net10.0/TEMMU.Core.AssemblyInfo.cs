@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TEMMU.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+974fbab6c23cb4ee5f542a56238ef089efb8ab99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d191b8cd16b1fd0a08265530f002f8f9b72e0165")]
 [assembly: System.Reflection.AssemblyProductAttribute("TEMMU.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TEMMU.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
