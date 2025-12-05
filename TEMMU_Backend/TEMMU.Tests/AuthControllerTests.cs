@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 using TEMMU.API.Controllers;
 using TEMMU.API.Models;
 using TEMMU.API.Services;
-using TEMMU.Infrastructure.Data;
 
 [TestFixture]
 public class AuthControllerTests
 {
     private Mock<UserManager<ApplicationUser>> _mockUserManager;
-    private Mock<TokenService> _mockTokenService;
+    private Mock<ITokenService> _mockTokenService;
     private AuthController _controller;
 
     [SetUp]
@@ -25,7 +24,7 @@ public class AuthControllerTests
         _mockUserManager = TestMocks.GetMockUserManager();
 
         // 2. Mock Token Service
-        _mockTokenService = new Mock<TokenService>(new Mock<IConfiguration>().Object);
+        _mockTokenService = new Mock<ITokenService>();
         _mockTokenService.Setup(t => t.CreateToken(It.IsAny<ApplicationUser>()))
                          .Returns("fake_jwt_token_12345");
 
@@ -39,7 +38,7 @@ public class AuthControllerTests
     public async Task Register_ValidModel_ReturnsOk()
     {
         // Arrange
-        var model = new RegistrationDTO { Email = "new@user.com", Password = "ValidPassword1", Username = "NewUser" };
+        var model = new RegistrationDTO { Email = "new@user.com", Password = "ValidPassword1!", Username = "NewUser" };
 
         // Act
         var result = await _controller.Register(model);
@@ -56,7 +55,7 @@ public class AuthControllerTests
     public async Task Login_ValidCredentials_ReturnsToken()
     {
         // Arrange
-        var model = new LoginDTO { Email = "test@example.com", Password = "Password123" };
+        var model = new LoginDTO { Email = "test@example.com", Password = "Password123!" };
 
         // Act
         var result = await _controller.Login(model);
@@ -91,7 +90,7 @@ public class AuthControllerTests
     public async Task Login_NonExistentUser_ReturnsUnauthorized()
     {
         // Arrange
-        var model = new LoginDTO { Email = "missing@user.com", Password = "Password123" };
+        var model = new LoginDTO { Email = "missing@user.com", Password = "Password123!" };
 
         // Act
         var result = await _controller.Login(model);

@@ -2,12 +2,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using TEMMU.Infrastructure.Data;
+
 
 namespace TEMMU.API.Services
 {
     // GameAPI.API/Services/TokenService.cs
-    public class TokenService
+    public class TokenService : ITokenService
     {
         private readonly IConfiguration _config;
 

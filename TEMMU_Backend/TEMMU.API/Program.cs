@@ -8,8 +8,6 @@ using Microsoft.OpenApi;
 using System.Text;
 using TEMMU.API.Services;
 using TEMMU.Core.Interfaces;
-using TEMMU.Infrastructure.Data;
-using TEMMU.Infrastructure.Repositories;
 
 
     public class Program
@@ -60,7 +58,7 @@ using TEMMU.Infrastructure.Repositories;
 
         // Register Repositories and Services
         builder.Services.AddScoped<IFighterRepository, FighterRepository>();
-        builder.Services.AddScoped<TokenService>(); // The JWT token generation service
+        builder.Services.AddScoped<ITokenService, TokenService>(); // The JWT token generation service
 
         // Add AutoMapper: Scans assemblies for classes inheriting from Profile (e.g., FighterProfile)
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

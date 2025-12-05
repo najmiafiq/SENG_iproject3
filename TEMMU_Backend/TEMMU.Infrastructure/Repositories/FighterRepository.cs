@@ -1,29 +1,29 @@
-﻿using TEMMU.Core.Interfaces;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using TEMMU.Core.Entities;
+using TEMMU.Core.Interfaces;
 
-namespace TEMMU.Infrastructure.Repositories
-{
-    public class FighterRepository : IFighterRepository
+
+public class FighterRepository : IFighterRepository
     {
-        private readonly Data.GameDBContext _context;
+        private readonly GameDBContext _context;
 
-        public FighterRepository(Data.GameDBContext context)
+        public FighterRepository(GameDBContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Core.Entities.FighterCharacter>> getAllFightersAsync()
+        public async Task<IEnumerable<FighterCharacter>> getAllFightersAsync()
         {
             return await _context.Fighters.ToListAsync();
         }
-        public async Task<Core.Entities.FighterCharacter?> getFighterByIdAsync(int id)
+        public async Task<FighterCharacter?> getFighterByIdAsync(int id)
         {
             return await _context.Fighters.FindAsync(id);
         }
-        public async Task addFighterAsync(Core.Entities.FighterCharacter fighter)
+        public async Task addFighterAsync(FighterCharacter fighter)
         {
             await _context.Fighters.AddAsync(fighter);
         }
-        public async Task updateFighterAsync(Core.Entities.FighterCharacter fighter)
+        public async Task updateFighterAsync(FighterCharacter fighter)
         {
             _context.Fighters.Update(fighter);
         }
@@ -40,4 +40,4 @@ namespace TEMMU.Infrastructure.Repositories
             return (await _context.SaveChangesAsync()) > 0;
         }
     }
-}
+

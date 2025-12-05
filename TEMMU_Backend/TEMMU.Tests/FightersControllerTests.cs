@@ -23,7 +23,7 @@ public class FightersControllerTests
     public void Setup()
     {
         _mockRepository = new Mock<IFighterRepository>();
-        _mockMapper = TestMocks.GetMapperMock(); // Use the mock mapper helper
+        IMapper realMapper = TestMocks.GetRealMapper(); // Use the mock mapper helper
 
         // Setup initial data for read/delete tests
         _mockRepository.Setup(r => r.getAllFightersAsync()).ReturnsAsync(new List<FighterCharacter>
@@ -34,7 +34,7 @@ public class FightersControllerTests
         _mockRepository.Setup(r => r.getFighterByIdAsync(1)).ReturnsAsync(new FighterCharacter { Id = 1, name = "Ryu", style = "Karate" });
         _mockRepository.Setup(r => r.getFighterByIdAsync(3)).ReturnsAsync((FighterCharacter)null); // Non-existent ID
 
-        _controller = new FightersController(_mockRepository.Object, _mockMapper.Object);
+        _controller = new FightersController(_mockRepository.Object, realMapper);
     }
 
     // --- R: READ (GET) Tests ---

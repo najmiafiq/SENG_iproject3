@@ -2,18 +2,18 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "AutoMapper/15.1.0": {
+      "AutoMapper/16.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "8.14.0"
         },
         "compile": {
-          "lib/net9.0/AutoMapper.dll": {
+          "lib/net10.0/AutoMapper.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/AutoMapper.dll": {
+          "lib/net10.0/AutoMapper.dll": {
             "related": ".xml"
           }
         }
@@ -1764,18 +1764,22 @@
     }
   },
   "libraries": {
-    "AutoMapper/15.1.0": {
-      "sha512": "uJXRC0ysO+i3fuW1onh0cUmaLbEwfMWwAZ5nw2eKhYccHwDgRhSC4Qj3rNdBy4vdhnC3r4NinhhldANKNWpH1Q==",
+    "AutoMapper/16.0.0": {
+      "sha512": "JIhkKjEsUcIPPbCR7cGQlH3a2ySLW2Tof6CXcJb5WbaoUkniREpJOlC2ROkaM/nck2b5JjptLIUdHvbItGvLGQ==",
       "type": "package",
-      "path": "automapper/15.1.0",
+      "path": "automapper/16.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "automapper.15.1.0.nupkg.sha512",
+        "automapper.16.0.0.nupkg.sha512",
         "automapper.nuspec",
         "icon.png",
+        "lib/net10.0/AutoMapper.dll",
+        "lib/net10.0/AutoMapper.xml",
+        "lib/net471/AutoMapper.dll",
+        "lib/net471/AutoMapper.xml",
         "lib/net8.0/AutoMapper.dll",
         "lib/net8.0/AutoMapper.xml",
         "lib/net9.0/AutoMapper.dll",
@@ -4972,8 +4976,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "AutoMapper >= 15.1.0",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "AutoMapper >= 16.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 10.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.0",
@@ -5048,11 +5051,7 @@
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
-            "version": "[15.1.0, )"
-          },
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-            "target": "Package",
-            "version": "[12.0.1, )"
+            "version": "[16.0.0, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -5549,7 +5548,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 15.1.0 was resolved.",
+      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 16.0.0 was resolved.",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"

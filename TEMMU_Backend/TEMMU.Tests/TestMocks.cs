@@ -1,34 +1,33 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using System.Security.Claims;
 using TEMMU.API.Models;
+using TEMMU.API.Profiles;
 using TEMMU.Core.Entities;
-using TEMMU.Infrastructure.Data;
+
 
 public static class TestMocks
 {
+    
     // Mock for IMapper
-    public static Mock<IMapper> GetMapperMock()
+    public static IMapper GetRealMapper()
     {
-        var mockMapper = new Mock<IMapper>();
+        ILoggerFactory loggerFactory = NullLoggerFactory.Instance;
+        // Define the mapping configuration, including all profiles
+        var config = new MapperConfiguration(cfg =>
+        {
+            // Add all your mapping profiles here
+            cfg.AddProfile<FighterProfile>();
+            
+        }, loggerFactory);
 
-        // Setup generic mapping behavior for DTOs
-        mockMapper.Setup(m => m.Map<FighterCharacter>(It.IsAny<FighterCharacterCreationDTO>()))
-                  .Returns((FighterCharacterCreationDTO src) => new FighterCharacter { name = src.name, style = src.style, healthBase = src.healthBase });
+        // Ensure configuration is valid (optional, but good practice)
+        config.AssertConfigurationIsValid();
 
-        mockMapper.Setup(m => m.Map<FighterCharacterReadDTO>(It.IsAny<FighterCharacter>()))
-                  .Returns((FighterCharacter src) => new FighterCharacterReadDTO { Id = src.Id, name = src.name });
-
-        // Setup for mapping to existing instance (PUT)
-        mockMapper.Setup(m => m.Map(It.IsAny<FighterCharacterCreationDTO>(), It.IsAny<FighterCharacter>()))
-                  .Callback((FighterCharacterCreationDTO src, FighterCharacter dest) =>
-                  {
-                      dest.name = src.name;
-                      dest.style = src.style;
-                  });
-
-        return mockMapper;
+        return config.CreateMapper();
     }
 
     // Mock for UserManager (simplified for AuthController tests)
@@ -47,7 +46,7 @@ public static class TestMocks
                    .ReturnsAsync(new ApplicationUser { UserName = "TestUser", Email = "test@example.com", Id = "user_id_1" });
 
         // Setup successful login (Check Password)
-        userManager.Setup(u => u.CheckPasswordAsync(It.Is<ApplicationUser>(u => u.Email == "test@example.com"), "Password123"))
+        userManager.Setup(u => u.CheckPasswordAsync(It.Is<ApplicationUser>(u => u.Email == "test@example.com"), "Password123!"))
                    .ReturnsAsync(true);
 
         // Setup failed login (Find User)
