@@ -13,10 +13,10 @@ The solution follows a standard Clean Architecture approach to ensure maintainab
 
 | Project | Responsibility | Key Components |
 | :--- | :--- | :--- |
-| **`GameAPI.API`** | **Presentation Layer** (Entry Point) | Controllers (`FightersController`, `AuthController`), Program/Startup, DTOs, JWT Configuration. |
-| **`GameAPI.Core`** | **Domain Layer** | Entity Models (`FighterCharacter`), Repository Interfaces (`IFighterRepository`). |
-| **`GameAPI.Infrastructure`** | **Data Access Layer** | `GameDbContext`, EF Core Migrations, Repository Implementation (`FighterRepository`). |
-| **`GameAPI.Tests`** | **Testing Layer** | Unit Tests for Controllers and Services (using NUnit and Moq). |
+| **`TEMMU.API`** | **Presentation Layer** (Entry Point) | Controllers (`FightersController`, `AuthController`), Program/Startup, DTOs, JWT Configuration. |
+| **`TEMMU.Core`** | **Domain Layer** | Entity Models (`FighterCharacter`), Repository Interfaces (`IFighterRepository`). |
+| **`TEMMU.Infrastructure`** | **Data Access Layer** | `GameDbContext`, EF Core Migrations, Repository Implementation (`FighterRepository`). |
+| **`TEMMU.Tests`** | **Testing Layer** | Unit Tests for Controllers and Services (using NUnit and Moq). |
 
 ## 🚀 Getting Started
 
@@ -32,8 +32,8 @@ Follow these steps to set up and run the API locally using **Docker Compose**. T
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [Your-Repo-URL]
-    cd GameDataManagerAPI
+    git clone 
+    cd repo name
     ```
 
 2.  **Verify Configuration:**
@@ -52,7 +52,7 @@ Follow these steps to set up and run the API locally using **Docker Compose**. T
 
     ```bash
     # Ensure you run this from the solution root
-    dotnet ef database update --project GameAPI.Infrastructure --startup-project GameAPI.API
+    dotnet ef database update --project TEMMU.Infrastructure --startup-project TEMMU.API
     ```
 
 ## 🔐 API Documentation and Usage
@@ -66,6 +66,8 @@ Open your browser and navigate to the Swagger UI:
 
 
 > **[http://localhost:5000/swagger](http://localhost:5000/swagger)**
+> **[https://localhost:7523/swagger](https://localhost:7523/swagger)**
+> Do check the port carefully as sometimes it can be different.
 
 ### Authentication Flow (Obtaining a JWT)
 
@@ -99,7 +101,7 @@ Once authorized, you can test the following endpoints:
 
 ## 🧪 Running Unit Tests
 
-The solution includes a dedicated `GameAPI.Tests` project. You can run all NUnit tests using the .NET CLI:
+The solution includes a dedicated `TEMMU.Tests` project. You can run all NUnit tests using the .NET CLI:
 
 ```bash
 dotnet test
