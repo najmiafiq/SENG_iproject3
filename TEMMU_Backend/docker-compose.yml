@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # --- 1. The API Service ---
+  gameapi:
+    image: gameapi_image # The name of the image to be built/used
+    build: 
+      context: .
+      dockerfile: TEMMU.API/Dockerfile
+    container_name: temmu_container
+    ports:
+      # Map host port 5000 to container port 8080
+      - "5000:8080" 
+    depends_on:
+      - sqlserver_db
+    environment:
+      # Set environment variable for the connection string
+      - ConnectionStrings__DefaultConnection=Server=sqlserver_db;Database=GameDB;User Id=sa;Password=aedrgasfd213fR!
+
+  # --- 2. The Database Service (MS SQL Server) ---
+  sqlserver_db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_container
+    ports:
+      # Map host port 1433 to container port 1433
+      - "1433:1433" 
+    environment:
+      # Required environment variables for SQL Server
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=ADd0DRGgsrg234! # IMPORTANT: Use a complex password!
+    volumes:
+      # Persist the database data outside the container
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:

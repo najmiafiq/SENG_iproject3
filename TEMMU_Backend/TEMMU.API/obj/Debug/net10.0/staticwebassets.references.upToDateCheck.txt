@@ -18,3 +18,9 @@ E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Core\obj\Debug\net10.0\staticwebas
 E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Infrastructure\obj\Debug\net10.0\staticwebassets.build.json
 E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Core\obj\Debug\net10.0\staticwebassets.build.json
 E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Infrastructure\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Core\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Infrastructure\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Core\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Infrastructure\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Core\obj\Debug\net10.0\staticwebassets.build.json
+E:\git_SENG\SEN_iproject3\TEMMU_backend\TEMMU.Infrastructure\obj\Debug\net10.0\staticwebassets.build.json

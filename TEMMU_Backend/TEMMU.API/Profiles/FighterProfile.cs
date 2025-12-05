@@ -16,13 +16,11 @@ namespace TEMMU.API.Profiles
             // Need custom logic to calculate winRate
 
             CreateMap<FighterCharacter, FighterCharacterReadDTO>()
-                .ForMember(dest => dest.winRate,opt => opt.MapFrom(src => 
-                    src.matchesPlayed > 0 ? (double)src.wins / src.matchesPlayed : 0.0));
-
-            // Mapping for PUT updates
-            CreateMap<FighterCharacterCreationDTO, FighterCharacter>()
+                .ForMember(dest => dest.winRate, opt => opt.MapFrom(src =>
+                src.matchesPlayed > 0 ? (double)src.wins / src.matchesPlayed : 0.0))
                 .ForAllMembers(opts => opts.Condition((src, dest, srcMember) =>
-                srcMember != null)); //Skip null/empty fields
+                srcMember != null)); // Mapping for PUT updates
+
         }
     }
 }
